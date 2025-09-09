@@ -7,31 +7,46 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>
+       <header>
             <h2>Varsha.io</h2>
-            <nav>
+            <nav class="topnav">
                 <ul>
                     <li><a href="./about.html">About</a></li>
                     <li><a href="./skills.html">Skills</a></li>
                     <li><a href="./project.html">Project</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
+                    <li><a href="./contact.html"class="active">Contact</a></li>
+                    </ul>
             </nav>
         </header>
-        <form method="post">
-            <label for="name">Name</label>
+         <section class="contact">
+            <h3>Get In Touch</h3>
+            <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+            
+        <form  action="https://formspree.io/f/mldwzgej" method="post" id="contactForm">
+             <div class="form-group">
+            <label for="name" id="name">Name</label>
             <input type="text" id="name" name="name" required>
-            <br>
-            <label for="email">Email Id</label>
-            <input type="email" id="email" name="email" required><br>
-            <select for="purpose">Purpose Of Contact</label>
-            <option value="dropdown" id="Collaboration" name="purpose" > Collaboration
-            <option value="dropdown" id="Freelance" name="purpose"  >Freelance
-            <option value="dropdown" id="Enquiry" name="purpose"  >Enquiry
-            <option value="dropdown"  id="Just To Say Hi" name="purpose"  >Just To Say Hi
+            </div>
+            <div class="form-group">
+            <label for="email"  id="email">Email Id</label>
+            <input type="email" id="email" name="email" required>
+            </div>
+                <div class="form-group">
+            <label for="purpose" id="purpose">Purpose of Contact</label>
+            <select name="purpose"  required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="Collaboration">Collaboration</option>
+            <option value="Freelance">Freelance Project</option>
+            <option value="Enquiry">General Inquiry</option>
+            <option value="Say Hi">Just Saying Hi 👋</option>
+            </select>
+        </div>
+            <div class="form-group">
             <label for ="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Submit</button>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
          </form>
+         </section>
     </body>
 </html>
