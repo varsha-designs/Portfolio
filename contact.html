@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h2>Varsha.io</h2>
+            <nav>
+                <ul>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./skills.html">Skills</a></li>
+                    <li><a href="./project.html">Project</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <form method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email Id</label>
+            <input type="email" id="email" name="email" required><br>
+            <select for="purpose">Purpose Of Contact</label>
+            <option value="dropdown" id="Collaboration" name="purpose" > Collaboration
+            <option value="dropdown" id="Freelance" name="purpose"  >Freelance
+            <option value="dropdown" id="Enquiry" name="purpose"  >Enquiry
+            <option value="dropdown"  id="Just To Say Hi" name="purpose"  >Just To Say Hi
+            <label for ="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+         </form>
+    </body>
+</html>
