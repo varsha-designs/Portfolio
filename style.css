@@ -35,6 +35,63 @@ header h2 {
 .topnav a.active {
   border-bottom: 2px solid #00bcd4;
 }
+/* Full-screen hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: white;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Heading animation */
+.hero h3 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInDown 1s forwards;
+}
+
+/* Paragraph animation */
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+.hero p:nth-of-type(1) { animation-delay: 0.5s; }
+.hero p:nth-of-type(2) { animation-delay: 1s; }
+
+/* Link styling */
+.hero .link {
+  color: #ffd700;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero .link:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
 
 .contact {
   max-width: 600px;
@@ -113,4 +170,9 @@ header h2 {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+#index, #about, #skills, #project, #contact {
+    text-align:center;
+    font-size: bold;
 }
