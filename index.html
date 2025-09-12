@@ -12,16 +12,83 @@
             <h2>Varsha.io</h2>
             <nav class="topnav">
                 <ul>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./skills.html">Skills</a></li>
-                    <li><a href="./project.html">Project</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     </ul>
             </nav>
              </header>
-       
-        <p>Hey, Its Varsha!<br> I’m into coding, especially backend stuff with PHP and Laravel.<br> When I’m not coding, you’ll find me writing quotes or exploring new things to learn.</p>
-        <p>Dive in to know a bit more 
-       <a href="about.html" class="text-blue-500 font-semibold hover:underline">About</a> me! 🚀</p>
+        <section id="index" class="hero">
+    <h3>Welcome to My Portfolio</h3>
+    <p>Hey, It's Varsha!<br>
+        I’m into coding, especially backend stuff with PHP and Laravel.<br>
+        When I’m not coding, you’ll find me writing quotes or exploring new things to learn.</p>
+    <p>Dive in to know a bit more 
+        <a href="#about" class="link">About</a> me! 🚀
+    </p>
+    </section>
+
+
+       <!-- ABOUT PAGE-->
+
+         <section id="about">
+            <h3>About Me</h3>
+     <p>I’m Varsha, an MCA graduate and a versatile Backend Developer with hands-on experience in PHP and Laravel.<br> I focus on creating robust web solutions and learning new technologies along the way.</p>
+        <p>Download my CV</p>
+
+        <!-- SKILLS PAGE-->
+
+         <section id="skills">
+            <h3>Skills</h3>
+        <div class="skillsContainer">
+            <!-- Skills will be loaded here -->
+           <button class="loadBtn">HTML | CSS | Js</button>
+              <button class="loadBtn">PHP | Laravel</button>
+                <button class="loadBtn">Bootstrap</button>
+                <button class="loadBtn">MySQL</button>
+                <button class="loadBtn">Git & GitHub</button>
+                <button class="loadBtn">Tailwind CSS</button>
+        </div>
+            </section>
+    
+            <!-- PROJECT PAGE-->
+    
+            <section id="project">
+                <h3>Project</h3>
+
+                <!--CONTACT PAGE-->
+            <section id="contact">
+                <div class="contact">
+            <h3>Get In Touch</h3>
+            <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+            
+        <form  action="https://formspree.io/f/mldwzgej" method="post" id="contactForm">
+             <div class="form-group">
+            <label for="name" id="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+            <label for="email"  id="email">Email Id</label>
+            <input type="email" id="email" name="email" required>
+            </div>
+                <div class="form-group">
+            <label for="purpose" id="purpose">Purpose of Contact</label>
+            <select name="purpose"  required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="Collaboration">Collaboration</option>
+            <option value="Freelance">Freelance Project</option>
+            <option value="Enquiry">General Inquiry</option>
+            <option value="Say Hi">Just Saying Hi 👋</option>
+            </select>
+        </div>
+            <div class="form-group">
+            <label for ="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+         </form>
+         </div>
+         </section>
     </body>
     </html>
