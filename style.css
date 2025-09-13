@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  background: linear-gradient(135deg, #0f0b09, #023fa7);
   color: #333;
 }
 
@@ -32,8 +32,8 @@ header h2 {
   text-decoration: none;
 }
 
-.topnav a.active {
-  border-bottom: 2px solid #00bcd4;
+.topnav a:hover {
+  border-bottom: 2px solid  #206af4;
 }
 /* Full-screen hero */
 .hero {
@@ -44,7 +44,7 @@ header h2 {
   align-items: center;
   text-align: center;
   padding: 0 20px;
-  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  background: linear-gradient(135deg, #0f0b09, #023fa7);
   color: white;
   overflow: hidden;
   font-family: 'Arial', sans-serif;
@@ -53,7 +53,7 @@ header h2 {
 /* Heading animation */
 .hero h3 {
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-top: 10px;
   opacity: 0;
   animation: fadeInDown 1s forwards;
 }
@@ -71,7 +71,7 @@ header h2 {
 
 /* Link styling */
 .hero .link {
-  color: #ffd700;
+  color: #206af4;
   font-weight: bold;
   text-decoration: none;
   transition: 0.3s;
@@ -90,6 +90,84 @@ header h2 {
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(30px); }
   100% { opacity: 1; transform: translateY(0); }
+}
+
+
+/* About Section */
+#about {
+    background: linear-gradient(135deg, #0f0b09, #023fa7);
+  padding: 4rem 2rem;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+#about h3 {
+  font-size: 2rem;
+  color: #2575fc;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+#about h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #206af4;
+  margin: 0.5rem auto 0;
+}
+
+#about p {
+  max-width: 700px;
+  margin: 1rem auto;
+  font-size: 1.1rem;
+  color: #f7f4f4;
+  line-height: 1.8;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.2s ease forwards;
+}
+
+#about p:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+#about p:nth-of-type(2) {
+  animation-delay: 1s;
+}
+
+/* CV Download button */
+#about p:last-of-type {
+  margin-top: 2rem;
+}
+
+#about p:last-of-type a {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  background: #206af4;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#about p:last-of-type a:hover {
+  background:#206af4; 
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
@@ -137,7 +215,7 @@ header h2 {
 }
 
 .btn-submit {
-  background: #00bcd4;
+  background: #206af4;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -148,7 +226,7 @@ header h2 {
 }
 
 .btn-submit:hover {
-  background: #0097a7;
+  background: #023fa7;
 }
 
 .skillsContainer {
