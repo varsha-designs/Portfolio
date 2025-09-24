@@ -171,6 +171,18 @@ header h2 {
   }
 }
 
+#contact h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 8px #60a5fa, 0 0 16px #3b82f6; }
+    to   { text-shadow: 0 0 18px #93c5fd, 0 0 30px #2563eb; }
+}
 
 .contact {
   max-width: 600px;
@@ -186,13 +198,9 @@ header h2 {
   color: #222;
 }
 
-.contact p {
-  margin-bottom: 20px;
-  color: #555;
-}
-
 #contactForm .form-group {
   margin-bottom: 15px;
+  color:black;
 }
 
 #contactForm label {
