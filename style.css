@@ -101,6 +101,7 @@ header h2 {
   animation: fadeIn 1.5s ease-in-out;
 }
 
+
 #about h3 {
   font-size: 2rem;
   color: #2575fc;
@@ -228,13 +229,93 @@ header h2 {
 .btn-submit:hover {
   background: #023fa7;
 }
+/* Container & heading */
+#skills {
+    text-align: center;
+    padding: 50px 20px;
+     background: linear-gradient(135deg, #0f0b09, #023fa7);
+    border-radius: 12px;
+    color: white;
+    
+}
 
+#skills h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 8px #60a5fa, 0 0 16px #3b82f6; }
+    to   { text-shadow: 0 0 18px #93c5fd, 0 0 30px #2563eb; }
+}
+
+/* Skills grid */
 .skillsContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    padding: 20px;
+    gap: 20px;
     justify-content: center;
+     /* 2 columns */
+    
+
+   
+}
+
+/* Skill card */
+.skill {
+    width: 260px;  /* fixed width */
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    backdrop-filter: blur(6px);
+     flex: 0 0 48%;   /* fixed ~half width so 2 per row */
+    box-sizing: border-box;
+  
+}
+
+.skill label {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* Progress bar container */
+.progress {
+    width: 100%;
+    height: 20px;  /* fixed height */
+    background: rgba(255,255,255,0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+      display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Animated fill bar */
+.progress-bar {
+    height: 100%;
+    width: 0;  /* start empty */
+    background: linear-gradient(90deg, #3b82f6, #1e40af);
+    border-radius: 12px;
+    display: flex;
+    justify-content: flex-end;  /* percentage text on the right */
+    align-items: center;
+    padding-right: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    line-height: 20px;
+    transition: width 2s ease-in-out;
+}
+
+
+#project{
+  color:white;
 }
 .loadBtn {  
     background-color:#0a68ff; /* Green */
