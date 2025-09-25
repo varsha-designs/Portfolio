@@ -190,6 +190,7 @@ header h2 {
 
 .progress-bar {
   height: 100%;
+  width:0;
   background: linear-gradient(90deg, #3b82f6, #1e40af);
   border-radius: 12px;
   display: flex;
@@ -203,10 +204,31 @@ header h2 {
 }
 
 /* Project Section */
+/* Project Section Styles */
 #project {
   color: white;
   padding: 50px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #0f0b09, #023fa7);
 }
+
+ #project h3   {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #f7f4f4;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+.pro-title    {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #f7f4f4;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
 
 .projectsContainer {
   display: flex;
@@ -215,23 +237,101 @@ header h2 {
   justify-content: center;
 }
 
+/* Project Card */
 .project-card {
-  background: rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 10px;
-  width: 250px;
-  backdrop-filter: blur(6px);
-  transition: transform 0.3s ease;
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 15px;
+  width: 280px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s forwards;
 }
 
+/* Staggered animation for each card */
+.project-card:nth-child(1) { animation-delay: 0.2s; }
+.project-card:nth-child(2) { animation-delay: 0.4s; }
+.project-card:nth-child(3) { animation-delay: 0.6s; }
+
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
+
+.project-card h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #f7f4f4;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #f0f0f0;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.project-card ul {
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.project-card ul li {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  list-style-type: disc;
+}
+
+/* GitHub button */
+.project-card .btn-submit {
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  background: #206af4;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.project-card .btn-submit:hover {
+  background: #023fa7;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 8px #60a5fa, 0 0 16px #3b82f6; }
+  to   { text-shadow: 0 0 18px #93c5fd, 0 0 30px #2563eb; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .projectsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
 
 /* Contact Section */
 #contact {
   padding: 50px 20px;
   text-align: center;
+   background: linear-gradient(135deg, #0f0b09, #023fa7);
 }
 #contact h3 {
   font-size: 30px;
@@ -253,10 +353,11 @@ header h2 {
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.contact h3 {
+#contact h2 {
   margin-bottom: 10px;
-  color: #222;
+  color: #fffcfc;
 }
+
 
 #contactForm .form-group {
   margin-bottom: 15px;
