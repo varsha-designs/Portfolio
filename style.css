@@ -20,10 +20,11 @@ header {
   z-index: 999;
 }
 
-header h2 {
+header h2:hover {
+  color: #dee3eb; /* matches your link color */
+  cursor: pointer;
   margin: 0;
 }
-
 .topnav ul {
   list-style: none;
   display: flex;
