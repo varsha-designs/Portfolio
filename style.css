@@ -23,7 +23,10 @@ header {
 header h2:hover {
   color: #dee3eb; /* matches your link color */
   cursor: pointer;
-  margin: 0;
+ 
+}
+header h2{
+ margin: 0;
 }
 .topnav ul {
   list-style: none;
