@@ -20,14 +20,21 @@ header {
   z-index: 999;
 }
 
-header h2:hover {
-  color: #dee3eb; /* matches your link color */
+header a:hover h2 {
+  color: #fdfeff;
+/* matches your link color */
   cursor: pointer;
-  text-decoration: none;
- 
+}
+header a:hover,
+header a:visited,
+header a:link,
+header a:active {
+  color: #fdfeff;
+  text-decoration-line: none; /* force white for all states */
 }
 header h2{
  margin: 0;
+ color:white;
 }
 .topnav ul {
   list-style: none;
