@@ -23,6 +23,7 @@ header {
 header h2:hover {
   color: #dee3eb; /* matches your link color */
   cursor: pointer;
+  text-decoration: none;
  
 }
 header h2{
