@@ -45,4 +45,26 @@ sections.forEach(section => {
   observer.observe(section);
 });
 
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault(); // stop normal form submit
+
+  let form = e.target;
+  let formData = new FormData(form);
+
+  // Send to Formspree
+  let response = await fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (response.ok) {
+    alert("✅ Thanks! Your message has been sent.");
+    form.reset(); // clear fields
+  } else {
+    alert("❌ Oops! Something went wrong. Please try again.");
+  }
+});
+
+
 
