@@ -11,7 +11,7 @@ body {
 header {
   background: #222;
   color: white;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,6 +48,7 @@ header h2{
   color: white;
   text-decoration: none;
   transition: 0.3s;
+   padding-bottom: 4px; 
 }
 
 .topnav a:hover {
@@ -450,3 +451,14 @@ header h2{
   #contactForm textarea { font-size: 0.9rem; }
   .btn-submit { width: 100%; }
 }
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
